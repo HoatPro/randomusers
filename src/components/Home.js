@@ -222,21 +222,18 @@ class Home extends React.Component {
                 <td>Name</td>
                 <td>Email</td>
                 <td>Phone</td>
-                <td>Gender</td>
                 <td>National</td>
               </tr>
             </thead>
             <tbody>
               {users.map((user, index) => {
                 return (
-                  <tr key={index}>
-                    <td
-                      onClick={() => {
-                        this.open(
-                         user
-                        );
-                      }}
-                    >
+                  <tr key={index} onClick={() => {
+                    this.open(
+                      user
+                    );
+                  }}>
+                    <td>
                       <img src={user.picture.medium} alt="" />
                     </td>
                     <td>
@@ -247,9 +244,6 @@ class Home extends React.Component {
                     </td>
                     <td>
                       <h4>{user.phone}</h4>
-                    </td>
-                    <td>
-                      <h4>{user.gender}</h4>
                     </td>
                     <td>
                       <h4>{user.nat}</h4>
